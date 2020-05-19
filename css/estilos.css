@@ -1,0 +1,204 @@
+ /* reset do css */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+
+  body {
+    background-image: url(../img/backg-image.jpg);
+    background-size: auto 100vh;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    font-size: 15px;
+  }
+
+  /* Se a tela tiver pelo menos 400px vai carregar estes estilos */
+  @media (min-width: 400px) {
+      body{
+        font-size: 20px;
+      }
+
+  }
+
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .menu{
+    background-color: rgba(255, 255, 255, 0.904);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    border-bottom: 5px solid rgba(21, 104, 212, 0.596);
+    z-index: 1;
+  }
+
+   .menu a {
+     padding: 10px;
+     display: block;
+     transition: background-color 1s, color 1s; /* posso escrever transition: all 2s; */
+   }
+
+  .menu a:hover{
+     background-color: teal;
+     color: white; 
+    }
+  
+  .menu li{
+    list-style: none;
+    font-family: 'Press Start 2P', cursive;
+   
+  }
+  
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8em;
+  }
+  
+  a {
+    color: rgb(23, 77, 160);
+    text-decoration: none;
+  }
+  
+  .titulo{
+    transform: scale(0.2);
+    opacity: 0;
+    animation: linear 2s animacaoTitulo forwards;
+  }
+
+  @keyframes animacaoTitulo{
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+  }
+
+
+
+  .site-title, .site-subtitle{
+    color: #fafafa;
+    text-align: center;
+  
+  }
+
+  .site-title{
+    font-size: 4em;
+    font-family: 'Parisienne', cursive;
+  }
+  
+  .site-subtitle{
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8em;
+  }
+
+  .portfolio, .contato, .sobre{
+    padding: 2em;
+    min-height: 100vh;
+  }
+
+
+
+
+
+
+  .sobre p{
+    color: whitesmoke;
+    text-indent: 1.2em;
+    padding: 0.6em;
+  }
+
+  .sobre img{
+    width: 14em;
+    border-radius: 10%;
+    border: 2px solid white;
+
+  }
+
+  .sobre .avatar{
+    float: left;
+    margin-right: 2em;
+  }
+
+  .portfolio h2, .contato h2, .sobre h2{
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    margin-bottom: 1.8em ;
+    font-size: 1.4em ;
+  }
+
+  .grid{
+    color: rgb(255, 255, 255);
+    display: grid;
+    gap: 2em;
+  }
+
+  .img-portfolio{
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 40px;
+    transition: transform 0.5s;
+  }
+
+  .img-portfolio:hover{
+    transform: scale(1.1);
+  }
+
+
+  @media(min-width: 560px){
+    .grid{
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media(min-width: 880px){
+    .grid{
+      grid-template-columns: repeat(2, 290px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 4em - 48px - 1.5em)
+    }
+  }
+
+  .portfolio figure{
+    text-align: center;
+  }
+
+  @media (min-width: 1200px){
+    .img-portfolio{
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  
+  .contato .icons{
+    text-align: center;
+  }
+
+
+  .contato a{
+    color: whitesmoke;
+    font-size: 7em;
+    width: 1em;
+    height: 1.5em;
+    transition: text-shadow 700ms;
+  }
+
+
+  .contato a:active,
+  .contato a:hover{
+    text-shadow: 0px 0px 10px white;
+  }
+
+
